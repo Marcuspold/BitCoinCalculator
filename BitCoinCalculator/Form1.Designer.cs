@@ -43,7 +43,7 @@ namespace BitCoinCalculator
             this.CurrencyMenu.Items.AddRange(new object[] {
             "EUR",
             "USD",
-            "POUND"});
+            "GBP"});
             this.CurrencyMenu.Location = new System.Drawing.Point(39, 59);
             this.CurrencyMenu.Name = "CurrencyMenu";
             this.CurrencyMenu.Size = new System.Drawing.Size(146, 28);

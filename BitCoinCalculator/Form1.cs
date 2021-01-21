@@ -41,9 +41,21 @@ namespace BitCoinCalculator
 
                 BitCoinRates ResultRates = GetRates();
                 int userCoins = Int32.Parse(AmountOfBts.Text);
-                float CurrentRate = ResultRates.Bpi.USD.rate_float;
+                float CurrentRate = ResultRates.bpi.USD.rate_float;
                 float btcResult = userCoins * CurrentRate;
-                Result.Text = $"{btcResult} {ResultRates.Bpi.USD.code}";
+                Result.Text = $"{btcResult} {ResultRates.bpi.USD.code}";
+            }
+
+            if (CurrencyMenu.SelectedItem.ToString() == "GBP")
+            {
+                ResultLbl.Visible = true;
+                Result.Visible = true;
+
+                BitCoinRates ResultRates = GetRates();
+                int userCoins = Int32.Parse(AmountOfBts.Text);
+                float CurrentRate = ResultRates.bpi.GBP.rate_float;
+                float btcResult = userCoins * CurrentRate;
+                Result.Text = $"{btcResult} {ResultRates.bpi.GBP.code}";
             }
         }
 
